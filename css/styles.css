@@ -1,0 +1,23 @@
+/* Hier kommen alle deine CSS Classen und Veränderungen rein */
+/* Setzt Margin, Padding und box-sizing für ALLE Elemente */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+/* 
+Hier ein kleiner aber fortgeschrittener Trick:
+Da font-size 100% (1REM) in fast allen Browsern 16px ist wird hierdurch die root font-size auf 10px gesetzt. 
+Hierdurch ist 1REM = 10px 
+FYI: Diesen Trick würde ich nicht in Projekten anwenden bei denen frontendverändernde Plugins mit im Spiel sind.
+*/
+html {
+  font-size: 62.5%;
+}
+/* Font-Size wird hier wieder auf 16px angehoben */
+body {
+  box-sizing: border-box;
+  font-size: 1.6rem;
+}

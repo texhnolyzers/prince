@@ -1,0 +1,67 @@
+<!doctype html>
+
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>TITEL</title>
+    <!-- Beispiele für Meta Informationen -->
+    <meta name="description" content="BESCHREIBUNG DER WEBSITE">
+    <meta name="author" content="AUTHOR DER WEBSITE">
+    <!-- Beispiele für Meta Informationen für Social Media -->
+    <!-- og = OpenGraph unterstützt fast alle Social Media Plattformen -->
+    <meta property="og:title" content="TITEL DER WEBSITE">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="URL DER WEBSITE">
+    <meta property="og:description" content="BESCHREIBUNG DER WEBSITE">
+    <meta property="og:image" content="media/image.png">
+
+    <!-- Favicon Einbindung mit Fallbacks für verschiedene Browser -->
+    <link rel="icon" href="/media/favicon.ico">
+    <link rel="icon" href="/media/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/media/apple-touch-icon.png">
+
+    <!-- Einbindung der CSS Datei -->
+    <link rel="stylesheet" href="css/styles.css?">
+</head>
+
+<body>
+    <header>
+        <div>
+            <!-- Logo -->
+            <!-- Titel -->
+            <nav>
+                <ul>
+                    <li><a href="" target="_self">Startseite</a></li>
+                </ul>
+            </nav>
+            <!-- Tipp: Um die Nav nicht auf jeder Seite separat zu haben kann man hier mit iFrames oder JavaScript arbeiten -->
+            <!-- Hier ein Beispiel mit Javascript -->
+            <div id="navbar"></div>
+        </div>
+    </header>
+    <main>
+        <div>
+            <!-- Deine Inhalte kommen hier rein -->
+        </div>
+    </main>
+    <footer>
+        <div>
+            <!-- Dein Footer kommt hier rein -->
+        </div>
+    </footer>
+    <!-- Beispiel für JS Einbindung -->
+    <script src="js/scripts.js"></script>
+    <!-- Beispiel für JS Menu -->
+    <script>
+        fetch('navigation.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('navbar').innerHTML = data;
+        });
+    </script>
+</body>
+
+</html>
